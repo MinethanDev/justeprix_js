@@ -1,4 +1,4 @@
-function genererNombreAleatoire() { // G
+function genererNombreAleatoire() { // Génère un nombre aléatoire entre 1 & 100
     return Math.floor(Math.random() * 100) + 1;
 }
 
