@@ -16,7 +16,10 @@ body {
 .content {
     color: white;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #logo{
@@ -26,17 +29,14 @@ body {
 .regles{
     font-weight: bold;
     text-align: center;
-    font-size: 1.3em;
 }
 
 .centered-div {
-    padding: 3vh;
-    margin: 10vh auto;
+    padding: 20px;
     border: 5px solid #ffffff;
     border-radius: 10px;
     background-color: #0000007a;
     display: inline-block;
-    font-size: 1em;
 }
 
 .bouton-proposer {
