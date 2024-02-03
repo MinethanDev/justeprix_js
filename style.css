@@ -39,7 +39,7 @@ body {
     display: inline-block;
 }
 
-.bouton-proposer {
+.bouton {
     background-color: #223edd;
     color: white;
     border-radius: 8px;
@@ -52,7 +52,7 @@ body {
     text-decoration: none;
 }
 
-.bouton-proposer:hover {
+.bouton:hover {
     background-color: #3e57e2;
 }
 

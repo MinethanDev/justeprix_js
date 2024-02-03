@@ -11,29 +11,32 @@ window.onload = function () {
     document.getElementById("essai_numero").innerText = "Premier essai";
 };
 
-var nombreEssais = 2;
+var nombreEssais = 1;
 
 
 function envoyer_estimation() {
 
     if (document.getElementById("resultat").innerText.includes("Bravo")) { // Empêche de nouveau essais si la partie a été gagnée
         return;
-    }
-
-    var estimationUtilisateur = parseInt(document.getElementById("estimation_joueur").value);
-
-    if (estimationUtilisateur === window.nombreSecret) {
-        document.getElementById("resultat").innerText = "Bravo ! Le nombre était bien " + window.nombreSecret;
-        document.getElementById("refresh_btn").style.display = "inline-block";
-    } else if (estimationUtilisateur < window.nombreSecret) {
-        document.getElementById("resultat").innerText = "C'est plus";
     } else {
-        document.getElementById("resultat").innerText = "C'est moins";
+        var estimationUtilisateur = parseInt(document.getElementById("estimation_joueur").value);
+
+        if (estimationUtilisateur === window.nombreSecret) {
+            document.getElementById("resultat").innerText = "Bravo ! Le nombre était bien " + window.nombreSecret + "\n Vous avez trouvé en " + nombreEssais + " essais !";
+            document.getElementById("refresh_btn").style.display = "inline-block";
+            document.getElementById("proposer_btn").disabled = true;
+            document.getElementById("proposer_btn").style.backgroundColor = "#383838";
+            document.getElementById("proposer_btn").style.cursor = "not-allowed";
+        } else if (estimationUtilisateur < window.nombreSecret) {
+            document.getElementById("resultat").innerText = "C'est plus";
+            nombreEssais++;
+        } else {
+            document.getElementById("resultat").innerText = "C'est moins";
+            nombreEssais++;
+        }
+    
+        document.getElementById("essai_numero").innerText = "Essai n°" + nombreEssais;
     }
-
-    document.getElementById("essai_numero").innerText = "Essai n°" + nombreEssais;
-
-    nombreEssais++;
 }
 
 function refresh() { // Bouton pour refresh la page
