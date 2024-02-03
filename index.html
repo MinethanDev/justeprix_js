@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="script.js"></script>
+    <title>Le Juste Prix</title>
+</head>
+<body>
+    <div class="content">
+
+        <img src="assets/logo.png" alt="Logo du Juste Prix" id="logo">
+
+        <p class="regles">Le but du jeu est simple !<br>Entrez un nombre en 1 et 100 jusqu'à trouver le bon.</p>
+
+        <div class="centered-div">
+            <form action="prix_utilisateur" method="POST">
+                <label>Votre proposition :</label>
+                <br><br>
+                <input type="number" name="estimation_joueur" id="estimation_joueur" class="estimation-joueur" value="" onkeydown="if(event.keyCode===13){event.preventDefault(); envoyer_estimation();}">
+                <br><br>
+                <span id="essai_numero">Premier essai</span>
+                <br><br>
+                <button type="button" class="bouton-proposer" onclick="envoyer_estimation()">Proposer</button>
+            </form>
+            
+            <p id="resultat"></p>
+
+            <button id="refresh_btn" style="display: none;" type="button" class="bouton-proposer" onclick="refresh()">Rejouer</button>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 - Codé avec ❤ par <b><a href="https://github.com/MinethanDev/">Minethan</b></p>
+    </footer>
+
+</body>
+</html>

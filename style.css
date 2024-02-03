@@ -1,0 +1,82 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#logo{
+    height: 25vh;
+}
+
+.regles{
+    font-weight: bold;
+    text-align: center;
+}
+
+.centered-div {
+    padding: 20px;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    background-color: #0000007a;
+    display: inline-block;
+}
+
+.bouton-proposer {
+    background-color: #223edd;
+    color: white;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.bouton-proposer:hover {
+    background-color: #3e57e2;
+}
+
+.centered-div .estimation-joueur{
+    background-color: #00000000;
+    color: white;
+    border-radius: 8px;
+    border-style: none;
+    border: 1px solid #ffffff;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
