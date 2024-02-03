@@ -15,6 +15,11 @@ var nombreEssais = 2;
 
 
 function envoyer_estimation() {
+
+    if (document.getElementById("resultat").innerText.includes("Bravo")) { // Empêche de nouveau essais si la partie a été gagnée
+        return;
+    }
+
     var estimationUtilisateur = parseInt(document.getElementById("estimation_joueur").value);
 
     if (estimationUtilisateur === window.nombreSecret) {
